@@ -12,10 +12,9 @@ This application demonstrates how real-world web apps securely manage user accou
 * JWT Authentication
 * HTTP-Only Cookies
 * Protected Backend Routes
-* Role Based Access Control (Admin/User)
 * React Frontend Forms
 * Logout System
-* Future: OTP Email Verification & Password Reset
+* OTP Email Verification & Password Reset
 
 ---
 
@@ -52,7 +51,7 @@ This application demonstrates how real-world web apps securely manage user accou
 secure-auth-system
 │
 ├── backend
-└── frontend
+└── AuthApp
 ```
 
 ---
@@ -64,13 +63,13 @@ secure-auth-system
 ```
 cd backend
 npm install
-npm start
+npm run start
 ```
 
 ### Frontend
 
 ```
-cd frontend
+cd AuthApp
 npm install
 npm run dev
 ```
@@ -93,7 +92,7 @@ http://localhost:5000
 
 | Method | Endpoint           | Description         |
 | ------ | ------------------ | ------------------- |
-| POST   | /api/auth/register | Register a new user |
+| POST   | /api/auth/sigup    | Register a new user |
 | POST   | /api/auth/login    | Login existing user |
 
 ---
