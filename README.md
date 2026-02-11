@@ -1,100 +1,87 @@
-# Secure Auth API
+# Secure Auth System
 
-A production-style authentication and authorization backend built using Node.js, Express, MongoDB and JWT.
-This project demonstrates how real applications securely manage user identity, sessions and protected resources.
+A full-stack authentication and authorization system built with the MERN stack.
+This application demonstrates how real-world web apps securely manage user accounts, login sessions and protected routes.
 
 ---
 
 ## Features
 
-* User Registration
+* User Signup & Login
 * Secure Password Hashing (bcrypt)
-* Login Authentication
-* JWT Token Generation
-* HTTP-Only Cookie Storage
-* Protected Routes Middleware
-* Role Based Access Control (User / Admin)
-* Logout Functionality
-* Password Reset (planned)
-* OTP Email Verification (planned)
+* JWT Authentication
+* HTTP-Only Cookies
+* Protected Backend Routes
+* Role Based Access Control (Admin/User)
+* React Frontend Forms
+* Logout System
+* Future: OTP Email Verification & Password Reset
 
 ---
 
 ## Tech Stack
 
-**Backend**
+### Frontend
+
+* React (Vite)
+* JavaScript
+* Fetch API
+* CSS
+
+### Backend
 
 * Node.js
 * Express.js
 
-**Database**
+### Database
 
 * MongoDB
 * Mongoose
 
-**Security**
+### Security
 
 * bcryptjs
 * jsonwebtoken
 * cookie-parser
-* dotenv
-
-**Utilities**
-
-* Nodemailer (for email verification)
-* CORS
 
 ---
 
-## Project Structure
+## Folder Structure
 
 ```
-auth-system
+secure-auth-system
 │
-├── config
-├── controllers
-├── middleware
-├── models
-├── routes
-├── .env
-└── server.js
+├── backend
+└── frontend
 ```
 
 ---
 
-## Getting Started
+## Running the Project
 
-### 1. Clone Repository
-
-```
-git clone https://github.com/YOURUSERNAME/secure-auth-api.git
-cd secure-auth-api
-```
-
-### 2. Install Dependencies
+### Backend
 
 ```
+cd backend
 npm install
-```
-
-### 3. Environment Variables
-
-Create a `.env` file and add:
-
-```
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_app_password
-```
-
-### 4. Run Server
-
-```
 npm start
 ```
 
-Server will start at:
+### Frontend
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:5173
+```
+
+Backend runs on:
 
 ```
 http://localhost:5000
@@ -104,27 +91,16 @@ http://localhost:5000
 
 ## API Endpoints
 
-| Method | Endpoint           | Description       |
-| ------ | ------------------ | ----------------- |
-| POST   | /api/auth/register | Register new user |
-| POST   | /api/auth/login    | Login user        |
+| Method | Endpoint           | Description         |
+| ------ | ------------------ | ------------------- |
+| POST   | /api/auth/register | Register a new user |
+| POST   | /api/auth/login    | Login existing user |
 
 ---
 
-## Purpose of This Project
+## Purpose
 
-The goal of this project is to demonstrate backend development skills including authentication, security practices, database design and middleware implementation.
-It is designed as a portfolio-ready project for internship and developer roles.
-
----
-
-## Future Improvements
-
-* Refresh Tokens
-* Email Verification
-* OTP Authentication
-* Rate Limiting
-* Account Lock after failed attempts
+This project is built as a portfolio-ready full-stack application demonstrating secure authentication, backend architecture and frontend-backend communication.
 
 ---
 
